@@ -1,5 +1,3 @@
-# Proteum-FL
-
 Proteum/FL is a command line fault localization tool.
 To perform the fault localizaton process the following 5 steps are needed
 
@@ -92,52 +90,3 @@ perl MutantsGen.pl -D path_to_fault2 -F  F_Tests_v2 __v2.c //Creates the mutants
 perl execute_mutants.pl -D path_to_fault2 -F F_Tests_v2 -P P_Tests_v2 __v2.c //Creates the Mutant_matrix.txt file on the path_to_fault2 directory
 perl FaultLocalization.pl -D path_to_fault2 -F F_Tests_v2 -P P_Tests_v2 //Creates the MutantLocalizationResults.txt file on the path_to_fault2 directory
 
-## Tool Demo
-
-The following link (Tool Demo) links to a zip file containing the Proteum/FL tool, an executable version of the Proteum/IM and doalarm tools. It also contains two examples fault1 and fault2. These are the first two versions of the tcas program.
-please refer to the ReadMe file for further details.
-
-    Tool Demo (with examples)
-    Fault Localization Results fault 1 (example)
-    Fault Localization Results fault 2 (example)
-
-To avoid the need of installing Proteum/IM, the examples include the preprocessed files and the mutant description files.
-They also include an executable of the doalarm and the failed and passed test cases.
-
-To execute the first example (fault1, using the provided mutant descriptions and preprossed files) it is needed to run the following commands:
-
-    perl execute_suites_statement.pl -D path_to_fault1 -F F_Tests_v1 -P P_Tests_v1 __v1.c //Creates the Statement_matrix.txt file on the path_to_fault1 directory
-    perl MutantsGen.pl -D path_to_fault1 -F  F_Tests_v1 __v1.c //Creates the mutants on the path_to_fault1/mutants directory
-    perl execute_mutants.pl -D path_to_fault1 -F F_Tests_v1 -P P_Tests_v1 __v1.c //Creates the Mutant_matrix.txt file on the path_to_fault1 directory
-    perl FaultLocalization.pl -D path_to_fault1 -F F_Tests_v1 -P P_Tests_v1 //Creates the MutantLocalizationResults.txt file on the path_to_fault1 directory
-
-
-To execute the Second example (fault2, using the provided mutant descriptions and preprossed files) it is needed to run the following commands:
-
-    perl execute_suites_statement.pl -D path_to_fault2 -F F_Tests_v2 -P P_Tests_v2 __v2.c //Creates the Statement_matrix.txt file on the path_to_fault2 directory
-    perl MutantsGen.pl -D path_to_fault2 -F  F_Tests_v2 __v2.c //Creates the mutants on the path_to_fault2/mutants directory
-    perl execute_mutants.pl -D path_to_fault2 -F F_Tests_v2 -P P_Tests_v2 __v2.c //Creates the Mutant_matrix.txt file on the path_to_fault2 directory
-    perl FaultLocalization.pl -D path_to_fault2 -F F_Tests_v2 -P P_Tests_v2 //Creates the MutantLocalizationResults.txt file on the path_to_fault2 directory
-
-
-
-## Extra Informations
-
-All content is the responsibility of original the authors
-
-The original site project is available at: https://sites.google.com/site/mikepapadakis/proteum-fl
-
-The paper is available at: http://ieeexplore.ieee.org/document/6648189/ or at: https://www.researchgate.net/publication/261096247_ProteumFL_A_tool_for_localizing_faults_using_mutation_analysis
-
-Consider to cite the paper:
-```json
-@InProceedings{6648189,
-	author={M. Papadakis and M. E. Delamaro and Y. Le Traon},
-	booktitle={IEEE 13th International Working Conference on Source Code Analysis and Manipulation (SCAM)},
-	title={Proteum/FL: A tool for localizing faults using mutation analysis},
-	year={2013},
-	pages={94-99},	
-	doi={10.1109/SCAM.2013.6648189},
-	month={Sept}
-}
-```

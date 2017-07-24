@@ -1,0 +1,26 @@
+How to run 
+-------------
+
+Proteum requires GCC to be installed. To use its GUI it is also necessary 
+TCL/TK.
+
+Suposing the executable files are in directory /usr/bin/proteum, run
+
+> export PROTEUMIMHOME=/usr/bin/proteum
+> export PATH=$PROTEUMIMHOME:$PATH
+> proteumim
+
+Proteum can also be run by a command line
+
+
+Documentation
+-------------
+
+This file
+
+
+
+Enjoy!
+
+Marcio Delamaro
+
